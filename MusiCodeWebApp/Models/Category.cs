@@ -26,5 +26,11 @@ namespace MusiCodeWebApp.Models
 
         [Display(Name = "Durum")]
         public bool IsActive { get; set; }
+
+        //public virtual ICollection<Brand> Brands { get; set; }
+
+        public virtual ICollection<Product> Product { get; set; }
+
+
     }
 }

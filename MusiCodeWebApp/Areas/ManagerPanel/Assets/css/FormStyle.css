@@ -14,11 +14,13 @@
         border-left: 1px solid silver;
         border-bottom: 1px solid silver;
         padding: 7px;
+        text-align:center;
     }
     .tablo tr td {
         border-left: 1px solid silver;
         border-bottom: 1px solid silver;
         padding: 10px;
+        text-align: center;
     }
 .editbutton {
     padding:3px 7px;
@@ -34,13 +36,20 @@
     border-radius: 3px;
     text-decoration: none;
 }
-.formContainer
-{
-    border:1px solid silver;
-    padding:15px;
+.changebutton {
+    padding: 3px 7px;
+    background-color: cadetblue;
+    color: white;
+    border-radius: 3px;
+    text-decoration: none;
+}
+.formContainer {
+    border: 1px solid silver;
+    padding: 15px;
 }
 .validationmesage {
     color: red;
+    font-weight:bold;
 }
 .row{
     margin:10px 0;
@@ -52,6 +61,13 @@
     -moz-box-sizing: border-box;
     padding:7px;
 }
+.numerictextbox {
+    width: 30%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 7px;
+}
 .formbutton {
     padding: 15px;
     background-color: #7e0490;
@@ -60,4 +76,9 @@
     border: 1px solid #7e0490;
     border-radius: 5px;
     cursor:pointer;
+}
+.imagePreview {
+    width: 120px;
+    padding: 10px;
+    float: left;
 }

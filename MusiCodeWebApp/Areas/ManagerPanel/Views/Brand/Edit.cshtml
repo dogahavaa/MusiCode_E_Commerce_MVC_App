@@ -1,0 +1,57 @@
+﻿@model MusiCodeWebApp.Models.Brand
+@{
+    ViewBag.Title = "Markayı Düzenle";
+    Layout = "~/Areas/ManagerPanel/Views/Shared/_LayoutPage1.cshtml";
+}
+@section styles
+{
+    <link href="~/Areas/ManagerPanel/Assets/css/FormStyle.css" rel="stylesheet" />
+}
+
+<div class="pagetitle">
+    <h2>Markayı Düzenle</h2>
+</div>
+<div class="formContainer">
+    @using (Html.BeginForm("Edit", "Brand", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.HiddenFor(x => x.ID)
+        @Html.HiddenFor(x => x.Logo)
+
+        if (ViewBag.hataMesaji != null)
+        {
+            <label class="validationmesage">@ViewBag.hataMesaji</label>
+        }
+        <div class="row">
+            <label>İsim</label><br />
+            @Html.EditorFor(x => x.Name, new { htmlAttributes = new { @class = "textbox" } })
+            @Html.ValidationMessageFor(x => x.Name, null, new { @class = "validationmesage" })
+        </div>
+
+        <div class="row">
+            <label>Açıklama</label><br />
+            @Html.EditorFor(x => x.Description, new { htmlAttributes = new { @class = "textbox" } })
+            @Html.ValidationMessageFor(x => x.Description, null, new { @class = "validationmesage" })
+        </div>
+
+        <div class="row">
+            <div class="imagePreview">
+                <label>Marka Logosu</label><br />
+                <img src="~/Areas/ManagerPanel/Assets/images/BrandImages/@Model.Logo" width="100" height="100" />
+            </div>
+            <div style="float:left; width:400px; padding-top:60px;">
+                <input type="file" name="logo" class="textbox" />
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="row">
+            @Html.EditorFor(x => x.IsActive, new { htmlAttributes = new { @id = "isActive" } })
+            <label for="isActive"> Aktif Mi ?</label>
+        </div>
+
+        <div>
+            <input type="submit" value="Marka Düzenle" class="formbutton" />
+        </div>
+    }
+</div>
+

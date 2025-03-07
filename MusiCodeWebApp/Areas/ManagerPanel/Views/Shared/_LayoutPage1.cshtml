@@ -30,11 +30,14 @@
         <label>Yönetim</label>
         <a href="@Url.Action("Index","Home")">Anasayfa</a>
         <label>Kategori</label>
-        <a href="@Url.Action("Index","Category")">Kategori Listele</a>
+        <a href="@Url.Action("Index","Category")">Kategoriler</a>
         <a href="@Url.Action("Create","Category")">Kategori Ekle</a>
         <label>Marka</label>
-        <a href="@Url.Action("Index","Home")">Marka Listele</a>
-        <a href="@Url.Action("Index","Home")">Marka Ekle</a>
+        <a href="@Url.Action("Index","Brand")">Markalar</a>
+        <a href="@Url.Action("Create","Brand")">Marka Ekle</a>
+        <label>Ürün</label>
+        <a href="@Url.Action("Index","Product")">Ürünler</a>
+        <a href="@Url.Action("Create","Product")">Ürün Ekle</a>
     </div>
     <div class="mainContainer">
         @RenderBody()

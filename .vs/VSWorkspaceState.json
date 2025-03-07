@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\MusiCodeWebApp",
+    "\\MusiCodeWebApp\\Areas",
+    "\\MusiCodeWebApp\\Areas\\ManagerPanel",
+    "\\MusiCodeWebApp\\Areas\\ManagerPanel\\Controllers"
+  ],
+  "SelectedNode": "\\MusiCodeWebApp\\Areas\\ManagerPanel\\Controllers\\CategoryController.cs",
+  "PreviewInSolutionExplorer": false
+}
